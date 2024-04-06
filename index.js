@@ -1,11 +1,11 @@
 const form = document.getElementById('form');
 const senhaInput = document.getElementById('senha');
 const senhaButton = document.getElementById('btnSenha');
-const formularioDiv = document.getElementById('formulario');
+const formularioDiv = document.getElementById('pedido');
 
 senhaButton.addEventListener('click', function() {
     const senhaDigitada = senhaInput.value;
-    const senhaCorreta = "123"; // Senha
+    const senhaCorreta = "como"; // Senha
     
     if (senhaDigitada === senhaCorreta) {
         formularioDiv.style.display = 'block';
@@ -20,19 +20,15 @@ form.addEventListener('submit', function(event) {
     event.preventDefault();
 
     const nome = document.getElementById('nome').value;
-    const curso = document.getElementById('curso').value;
+    const pizza = document.getElementById('pizza').value;
     const quantidade = parseInt(document.getElementById('quantidade').value);
     const quantidadeTurno = parseInt(document.getElementById('quantidadeTurno').value);
-    const horario = Array.from(document.getElementById('horario').selectedOptions).map(option => option.value);
-    const diasSemana = Array.from(document.getElementById('diasSemana').selectedOptions).map(option => option.value);
-    const dataEntrada = document.getElementById('dataEntrada').value;
-    const dataSaida = document.getElementById('dataSaida').value;
     const unidade = document.getElementById('unidade').value;
 
     const registro = {
         id: Date.now(),
         nome,
-        curso,
+        pizza,
         quantidade,
         quantidadeTurno,
         horario,

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt" br>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pizzaria PM</title>
+</head>
+
+<body>
+    <h1>PM PIZZA'S</h1>
+    <header>
+        <div class="menu-flutuante">
+            <button class="menu-button">Menu</button>
+            <div class="menu-conteudo">
+                <a href="index.html">Início</a>
+                <a href="cardapio">Cardápio</a>
+                <a href="contato">Contato</a>
+            </div>
+        </div>
+        
+        
+        <div class="imagem-container">
+            <div class="logop">
+                <img src="assets/pablo-removebg-preview.png" height="200px">
+            </div>
+        </div>
+    </header>
+    
+
+    <main>
+
+        <div id="senhaForm">
+            <label for="senha">COMECE COM COMO:</label>
+            <input class="senha1" type="password" id="senha" name="senha" required><br>
+            <button id="btnSenha" type="button">Enviar</button>
+        </div>
+
+        <form id="pedido" style="display: none;">
+            <label>Selecione sua Pizza:</label>
+            <select id="pizza" name="pizza" required>
+                <option value="" disabled selected>Selecione a sua Pizza</option>
+                <optgroup label="Pizza Salgada">
+                    <option value="pizza1">Pizza de Marguerita</option>
+                    <option value="pizza2">Pizza de Calabresa</option>
+                    <option value="pizza3">Pizza de Frango com Catupiry</option>
+                    <option value="pizza4">Pizza de Pepperoni</option>
+                    <option value="pizza5">Pizza Quatro Queijos</option>
+
+                </optgroup>
+                <optgroup label="Pizza Doce">
+                    <option value="pizza6">Pizza de Nutella</option>
+                    <option value="pizza7">Pizza de Romeu e Julieta</option>
+                </optgroup>
+            </select>
+
+            <label for="nome">Seu Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label>Endereço</label>
+            <input type="text" id="ende" name="ende">
+
+
+        </form>
+
+        <div id="registros">
+            <table id="registro-table" class="registro-table">
+                <thead>
+                    <tr>
+                        <th>Pizza</th>
+                        <th>Bebida</th>
+                        <th>Nome</th>
+                        <th>Endereço</th>
+                    </tr>
+                </thead>
+                <tbody id="registro-body">
+                </tbody>
+            </table>
+        </div>
+
+        <script src="index.js"></script>
+    </main>
+    <footer class="contato">
+        <div class="whatsapp"> <a href="https://wa.me/5584991847301?text=Gostaria+de+adquirir+meu+c%C3%B3digo%21%21"
+                target="_blank"><img src="assets/Pngtreewhatsapp_mobile_software_icon_8704828.png" width="30px"
+                    alt="Whatsapp"></a>
+            <p class="texto">Manda um Zap
+        </div>
+     </div>
+     <div class="instagram"><a href="https://www.instagram.com/pablomarcal1/" target="_blank"> <img
+                src="assets/kisspng-logo-computer-icons-graphic-design-instagram-love-5b38a2e5ba2bf6.2446954315304383737626.png"
+                width="35px"> </a>
+        <p class="texto">Segue Nos</p>
+     </div>
+     <div class="endereco"><a href="https://maps.app.goo.gl/Gtdyb9b4kVUDfogS6" target="_blank"><img
+                src="assets/end-removebg-preview.png" 
+                width="35px"></a>
+            <p class="texto">Localiza bb</div>
+    </footer>
+</body>
+
+</html>
