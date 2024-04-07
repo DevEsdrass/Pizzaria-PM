@@ -9,7 +9,7 @@
     <title>Pizzaria PM</title>
 </head>
 
-<body>
+<body >
     <h1 class="txtp">PM PIZZA'S</h1>
     <header>
         <div class="menu-flutuante">
@@ -29,18 +29,19 @@
         </div>
     </header>
 
-    <main>
-        <h2>Login</h2>
-        <form action="/login" method="POST">
-            <label for="username">Usuário:</label>
-            <input type="text" id="username" name="username" required><br>
-    
-            <label for="password">Senha:</label>
-            <input type="password" id="password" name="password" required><br>
-    
-            <button id="btnSenha" type="submit">Entrar</button>
-        </form>
+    <main class="login">    
+            <h2>Login</h2>
+            <form action="/login" method="POST" class="formLogin">
+                <label class="username" for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required><br>
+        
+                <label class="password" for="password">Senha:</label>
+                <input type="password" id="password" name="password" required><br>
+        
+                <button id="btnSenha" type="submit">Entrar</button>
+            </form>
     </main>
+
     <footer class="contato">
         <div class="whatsapp"> <a href="https://wa.me/5584991847301?text=Gostaria+de+adquirir+meu+c%C3%B3digo%21%21"
                 target="_blank"><img class="zap-img" src="assets/Pngtreewhatsapp_mobile_software_icon_8704828.png" width="30px"
@@ -57,6 +58,7 @@
                     src="assets/end-removebg-preview.png" width="35px"></a>
             <p class="texto">Localiza bb
         </div>
+      </div>
     </footer>
 </body>
 
