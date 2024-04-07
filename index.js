@@ -1,15 +1,14 @@
 const form = document.getElementById('pedido');
-const senhaInput = document.getElementById('senha');
-const senhaButton = document.getElementById('btnSenha');
-const formularioDiv = document.getElementById('pedido');
+const senha = document.getElementById('senha');
+const senhaBotao = document.getElementById('btnSenha');
 
-senhaButton.addEventListener('click', function () {
-    const senhaDigitada = senhaInput.value;
+senhaBotao.addEventListener('click', function () {
+    const senhaDigitada = senha.value;
     const senhaCorreta = "como"; // Senha
 
     if (senhaDigitada === senhaCorreta) {
-        formularioDiv.style.display = 'block';
-        senhaInput.value = '';
+        form.style.display = 'block';
+        senha.value = '';
         document.getElementById('senhaForm').style.display = 'none';
     } else {
         alert('Senha incorreta! Tente novamente.');
@@ -58,19 +57,3 @@ function adicionarRegistro(registro) {
     console.log('Formulário enviado');
 }
 
-function salvarRegistro(registro) {
-    let registros = JSON.parse(localStorage.getItem('registros')) || [];
-    registros.push(registro);
-    localStorage.setItem('registros', JSON.stringify(registros));
-}
-
-function removerRegistrosExpirados() {
-    let registros = JSON.parse(localStorage.getItem('registros')) || [];
-    const agora = new Date().toISOString().split('T')[0];
-
-    registros = registros.filter(registro => registro.dataSaida >= agora);
-
-    localStorage.setItem('registros', JSON.stringify(registros));
-}
-
-setInterval(removerRegistrosExpirados, 24 * 60 * 60 * 1000);
