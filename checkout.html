@@ -9,14 +9,14 @@
 </head>
 
 <body>
-    <h1>PM PIZZA'S</h1>
+    <h1 class="txtp">PM PIZZA'S</h1>
     <header>
         <div class="menu-flutuante">
             <button class="menu-button">Menu</button>
             <div class="menu-conteudo">
-                <a href="index.html">Início</a>
-                <a href="cardapio">Cardápio</a>
-                <a href="contato">Contato</a>
+                <a class="mntxt" href="index.html">Início</a>
+                <a class="mntxt" href="cardapio.html">Cardápio</a>
+                <a class="mntxt" href="login.html">Login</a>
             </div>
         </div>
         
@@ -32,39 +32,70 @@
     <main>
 
         <div id="senhaForm">
-            <label for="senha">COMECE COM COMO:</label>
-            <input class="senha1" type="password" id="senha" name="senha" required><br>
-            <button id="btnSenha" type="button">Enviar</button>
+            <h2 class="txtc2">Instale o Drive</h2>
+            <h1 class="txtc">COMECE COM COMO</h1>
+               <input class="btc" placeholder="código" type="password" id="senha" name="senha" required><br>
+            <div class="Enviar">
+                <button id="btnSenha" type="button">Enviar</button>
+            </div>
         </div>
 
         <form id="pedido" style="display: none;">
-            <label>Selecione sua Pizza:</label>
+            
+         
             <select id="pizza" name="pizza" required>
                 <option value="" disabled selected>Selecione a sua Pizza</option>
                 <optgroup label="Pizza Salgada">
-                    <option value="pizza1">Pizza de Marguerita</option>
-                    <option value="pizza2">Pizza de Calabresa</option>
-                    <option value="pizza3">Pizza de Frango com Catupiry</option>
-                    <option value="pizza4">Pizza de Pepperoni</option>
-                    <option value="pizza5">Pizza Quatro Queijos</option>
+                    <option value="Margherita">Pizza de Margherita</option>
+                    <option value="Calabresa">Pizza de Calabresa</option>
+                    <option value="Frango">Pizza de Frango com Catupiry</option>
+                    <option value="Pepperoni">Pizza de Pepperoni</option>
+                    <option value="Quatro Queijos">Pizza Quatro Queijos</option>
 
                 </optgroup>
                 <optgroup label="Pizza Doce">
-                    <option value="pizza6">Pizza de Nutella</option>
-                    <option value="pizza7">Pizza de Romeu e Julieta</option>
+                    <option value="Nutella">Pizza de Nutella</option>
+                    <option value="Romeu e Julieta">Pizza de Romeu e Julieta</option>
                 </optgroup>
             </select>
+            <br>
+            <select id="bebida" name="bebida" required>
+                <option value="" disabled selected>Selecione a sua Bebida</option>
+                <optgroup label="Bebidas">
+                    <option value="Coca Lata">Coca Cola Lata</option>
+                    <option value="Coca 1L">Coca Cola 1L</option>
+                    <option value="Guarana Lata">Guarana Lata</option>
+                    <option value="Guarana 1L">Guarana 1L</option>
+                    <option value="Agua com Gas">Agua com Gas</option>
+                </optgroup>
+                <optgroup label="Bebidas Gourmet">
+                    <option value="Coca Lata">Chandom</option>
+                    <option value="Coca 1L">Royal Salute</option>
+                    <option value="Guarana Lata"></option>
+                    <option value="Guarana 1L">Guarana 1L</option>
+                    <option value="Agua com Gas">Agua com Gas</option>
+                </optgroup>
 
-            <label for="nome">Seu Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-
-            <label>Endereço</label>
-            <input type="text" id="ende" name="ende">
-
-
+            </select>
+            <br>
+            <input type="text" placeholder="Nome" id="nome" name="nome" required>
+            <br>
+            <input type="text" placeholder="Endereço" id="ende" name="ende" required>
+            <br>
+            <select id="entrega" name="entrega" required>
+                <option value="" disabled selected>Selecione a sua forma de entrega</option>
+                <optgroup label="Entrega">
+                    <option value="Lancha">Lancha</option>
+                    <option value="Helicoptero">Helicoptero</option>
+                    <option value="Ferrari">Ferrari</option>
+                    <option value="Jato">Jato</option>
+                    <option value="Cavalo">Cavalo</option>
+            </select>
+            <br>
+            <button id="btnSenha" type="submit">Enviar Pedido</button>
         </form>
-
-        <div id="registros">
+        <br>
+        <div id="registros" style="display: none;">
             <table id="registro-table" class="registro-table">
                 <thead>
                     <tr>
@@ -72,12 +103,18 @@
                         <th>Bebida</th>
                         <th>Nome</th>
                         <th>Endereço</th>
+                        <th>Forma de entrega</th>
                     </tr>
                 </thead>
                 <tbody id="registro-body">
                 </tbody>
             </table>
         </div>
+        <br>
+        <br>
+        <h1 id="totalpedido" style="display: none;">Seu pedido está sendo preparado! O total é: 5.000 R$</h1>
+        <br>
+        <br>
 
         <script src="index.js"></script>
     </main>
