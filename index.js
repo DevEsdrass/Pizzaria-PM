@@ -1,10 +1,11 @@
 const form = document.getElementById('pedido');
 const senha = document.getElementById('senha');
-const senhaBotao = document.getElementById('btnSenha');
+const senhabotao = document.getElementById('btnSenha');
+const funcbotao = document.getElementById('funcbotao');
 
-senhaBotao.addEventListener('click', function () {
+senhabotao.addEventListener('click', function () {
     const senhaDigitada = senha.value;
-    const senhaCorreta = "como"; // Senha
+    const senhaCorreta = "como"; 
 
     if (senhaDigitada === senhaCorreta) {
         form.style.display = 'block';
@@ -21,6 +22,7 @@ form.addEventListener('submit', function (event) {
     
     document.getElementById('totalpedido').style.display = '';
     document.getElementById('registros').style.display = '';
+    document.getElementById('funcbotao').style.display = '';
 
     const pizza = document.getElementById('pizza').value;
     const bebida = document.getElementById('bebida').value;
@@ -56,4 +58,16 @@ function adicionarRegistro(registro) {
     registroBody.appendChild(newRow);
     console.log('Formulário enviado');
 }
+
+funcbotao.addEventListener('click', function () {
+    const primeiralinha = document.getElementById('registro-body').firstElementChild;
+
+    if (primeiralinha) {
+        primeiralinha.remove();
+        console.log('primeira linha removida');
+    } else {
+        console.log('Não há linhas para remover');
+        alert('vai quebrar?')
+    }
+});
 
